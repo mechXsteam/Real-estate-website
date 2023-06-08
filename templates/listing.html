@@ -5,7 +5,8 @@
 {% load humanize %}
 
 {% block content %}
-    <section id="showcase-inner" class="py-5 text-white">
+    <section id="showcase-inner" class="py-5 text-white"
+             style="background-image: url('{% static '/assets/img/about.jpg' %}')">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
@@ -204,7 +205,7 @@
                             <textarea name="message" class="form-control"></textarea>
                         </div>
                         <hr>
-                        <input type="submit" value="Send" class="btn btn-block btn-secondary">
+                        <button type="submit" value="Send" class="btn btn-block btn-secondary">Send</button>
                     </form>
                 </div>
             </div>

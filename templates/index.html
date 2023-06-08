@@ -6,16 +6,16 @@
 
 {% block content %}
     <!-- Showcase -->
-    <section id="showcase">
+    <section id="showcase" style="background-image: url('{% static '/assets/img/showcase.jpg' %}')">
         <div class="container text-center">
             <div class="home-search p-5">
                 <div class="overlay p-5">
                     <h1 class="display-4 mb-4">
                         Property Searching Just Got So Easy
                     </h1>
-                    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quas,
-                        asperiores eveniet vel nostrum magnam
-                        voluptatum tempore! Consectetur, id commodi!</p>
+                    <p class="lead"> Whether you're searching for a cozy suburban retreat, a luxurious urban penthouse,
+                        or a serene countryside escape, our dedicated team of real estate professionals is here to make
+                        your dreams a reality.</p>
                     <div class="search">
                         <form action="{% url 'listings:search' %}">
                             <!-- Form Row 1 -->
@@ -134,30 +134,33 @@
 
     <section id="services" class="py-5 bg-secondary text-white">
         <div class="container">
-            <div class="row text-center">
+            <div class="row text-justify">
                 <div class="col-md-4">
                     <i class="fas fa-comment fa-4x mr-4"></i>
                     <hr>
                     <h3>Consulting Services</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae,
-                        provident iste consequatur
-                        hic dignissimos ratione ea quae.</p>
+                    <p> Our experienced team of consultants provides valuable
+                        insights, market analysis, and strategic advice to guide you in making informed decisions.
+                        Whether you're looking to maximize your property's value, navigate complex legal matters, or
+                        optimize your real estate portfolio, our consulting services are designed to support your success.</p>
                 </div>
                 <div class="col-md-4">
                     <i class="fas fa-home fa-4x mr-4"></i>
                     <hr>
                     <h3>Propery Management</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae,
-                        provident iste consequatur
-                        hic dignissimos ratione ea quae.</p>
+                    <p>Our dedicated team of professionals offers comprehensive property management services, ensuring
+                        that your investment is well-cared for and optimized for maximum returns. From tenant screening
+                        and lease management to maintenance coordination and financial reporting, we handle all aspects
+                        of property management with meticulous attention to detail.</p>
                 </div>
                 <div class="col-md-4">
                     <i class="fas fa-suitcase fa-4x mr-4"></i>
                     <hr>
                     <h3>Renting & Selling</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae,
-                        provident iste consequatur
-                        hic dignissimos ratione ea quae.</p>
+                    <p>Our rigorous tenant screening process and thorough background checks provide you with peace of
+                        mind, while our comprehensive lease management services handle all the necessary paperwork and
+                        ensure a smooth rental experience. Contact us today to explore the renting and selling
+                        opportunities available through BRS Real Estate.</p>
                 </div>
             </div>
         </div>

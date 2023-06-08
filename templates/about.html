@@ -5,12 +5,12 @@
 {% block content %}
 
 
-  <section id="showcase-inner" class="py-5 text-white">
+  <section id="showcase-inner" class="py-5 text-white" style="background-image: url('{% static '/assets/img/about.jpg' %}')">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">About BT Real Estate</h1>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+          <h1 class="display-5">BRS Real Estate</h1>
+          <p class="lead">At BRS Real Estate, we specialize in connecting discerning homebuyers and investors with exceptional housing properties that redefine the meaning of quality living.</p>
         </div>
       </div>
     </div>
@@ -35,12 +35,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <h2>We Search For The Perfect Home</h2>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+          <h2>Your Gateway to Exceptional Housing Properties</h2>
+          <p class="lead">With our deep-rooted expertise in the real estate market, we strive to be your trusted partner
+              in finding the perfect home or investment opportunity.</p>
           <img src="{% static '/assets/img/about.jpg' %}" alt="">
-          <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae ad saepe ex, amet
-            neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
-            commodi id libero eveniet harum perferendis laborum molestias quia.</p>
+          <p class="mt-4">Our commitment to excellence is evident in every aspect of our services. From meticulously
+              curating a diverse portfolio of properties to providing personalized guidance throughout the buying
+              process, we prioritize your satisfaction above all else. Whether you're searching for a cozy suburban
+              retreat, a luxurious urban penthouse, or a serene countryside escape, our dedicated team of real estate
+              professionals is here to make your dreams a reality.</p>
         </div>
         <div class="col-md-4">
           {% if mvp_realtors %}
@@ -64,7 +67,7 @@
   <!-- Work -->
   <section id="work" class="bg-dark text-white text-center">
     <h2 class="display-4">We Work For You</h2>
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
+    <h5>At BRS Real Estate, we understand that a home is more than just bricks and mortar—it's a reflection of your lifestyle, aspirations, and dreams.</h5>
     <hr>
     <a href="{% url 'listings:listings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
   </section>

@@ -1,9 +1,10 @@
 from django.shortcuts import render
 
+from contacts.models import Contact
 from listings.choices import price_choices, bedroom_choices, state_choices
 from listings.models import Listing
 from realtors.models import Realtor
-from contacts.models import Contact
+
 
 # Create your views here.
 
@@ -13,7 +14,7 @@ def index(request):
                'state_choices': state_choices,
                'bedroom_choices': bedroom_choices,
                'price_choices': price_choices,
-               'title': 'BT Real Estate'
+               'title': 'BRS Real Estate'
                }
     return render(request, 'index.html', context)
 
@@ -36,6 +37,7 @@ def dashboard(request):
     user_contacts = Contact.objects.order_by('-contact_date').filter(user_id=request.user.id)
 
     context = {
-        'contacts': user_contacts
+        'contacts': user_contacts,
+        'title': 'BRS Real Estate | Dashboard'
     }
     return render(request, 'dashboard.html', context)

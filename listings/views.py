@@ -16,7 +16,7 @@ def index(request):
 
     context = {
         'listings': paged_listings,
-        'title': 'BT Real Estate | Listings'
+        'title': 'BRS Real Estate | Listings'
     }
 
     return render(request, 'listings.html', context)
@@ -27,7 +27,7 @@ def listing(request, listing_id):
 
     context = {
         'listing': listing,
-        'title': "BT Real Estate |" + " "+ listing.title,
+        'title': "BRS Real Estate |" + " " + listing.title,
     }
 
     return render(request, 'listing.html', context)
@@ -71,6 +71,6 @@ def search(request):
         'price_choices': price_choices,
         'listings': queryset_list,
         'values': request.GET,
-        'title': 'BT Real Estate | Search'
+        'title': 'BRS Real Estate | Search'
     }
     return render(request, 'search.html', context)
