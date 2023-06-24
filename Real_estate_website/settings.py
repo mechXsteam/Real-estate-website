@@ -27,8 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -63,7 +61,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-d113.up.railway.app/', "*"]
+# CSRF_TRUSTED_ORIGINS = ['https://web-production-d113.up.railway.app/', "*"]
+
+CORS_ALLOW_ALL_ORIGINS: True
 
 ROOT_URLCONF = 'Real_estate_website.urls'
 
