@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-0!#34jk*2x)a6*z@dbx4wp6vy3h=a$(zl96rny3is5xyr03fp5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -90,10 +91,11 @@ WSGI_APPLICATION = 'Real_estate_website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'raziel',
-        'HOST': 'localhost',
+        'PASSWORD': 'k1TAt8dmsBU90cMIiMC3',
+        'HOST': 'containers-us-west-86.railway.app',
+        'PORT': "7958"
     }
 }
 
@@ -141,6 +143,7 @@ MEDIA_URL = '/media/'
 
 # Messages
 from django.contrib.messages import constants as messages
+
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
