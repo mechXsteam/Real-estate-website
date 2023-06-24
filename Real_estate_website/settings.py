@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-d113.up.railway.app/', "*"]
+
 
 # Application definition
 
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'realtors.apps.RealtorsConfig',
     'users.apps.UsersConfig',
     'contacts.apps.ContactsConfig',
+
+    'corsheaders',
 
     # default config
     'django.contrib.admin',
@@ -53,12 +55,15 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CSRF_TRUSTED_ORIGINS = ['https://web-production-d113.up.railway.app/', "*"]
 
 ROOT_URLCONF = 'Real_estate_website.urls'
 
