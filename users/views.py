@@ -1,8 +1,10 @@
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
 
 
+@csrf_exempt
 def register(request):
     if request.method == 'POST':
         # Get form values
@@ -37,6 +39,7 @@ def register(request):
         return render(request, 'register.html')
 
 
+@csrf_exempt
 def login(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -55,6 +58,7 @@ def login(request):
         return render(request, 'login.html')
 
 
+@csrf_exempt
 def logout(request):
     if request.method == 'POST':
         auth.logout(request)
